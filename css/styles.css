@@ -303,6 +303,12 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   cursor: pointer;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal:hover {
+  fill: var(--accent-color);
 }
 
 /* -----------------------ФОРМА------------------------- */
@@ -363,12 +369,46 @@ body {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-terms {
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
+.input:hover,
+.input:focus-within {
+  border-color: var(--accent-color);
+}
+
+.box-user-name,
+.box-phone-number,
+.box-email {
+  position: relative;
+}
+
+.user-name-icon,
+.phone-number-icon,
+.email-icon {
+  position: absolute;
+  left: 12px;
+  top: 11px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:hover + .user-name-icon,
+.input:focus-within + .user-name-icon {
+  fill: var(--accent-color);
+}
+
+.input:hover + .phone-number-icon,
+.input:focus-within + .phone-number-icon {
+  fill: var(--accent-color);
+}
+
+.input:hover + .email-icon,
+.input:focus-within + .email-icon {
+  fill: var(--accent-color);
 }
 
 .textarea {
@@ -379,6 +419,15 @@ body {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textarea:hover,
+.textarea:focus-within {
+  border-color: var(--accent-color);
 }
 
 .textarea::placeholder {
@@ -396,6 +445,12 @@ body {
   align-items: center;
 
   margin-bottom: 30px;
+}
+
+.input-terms {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
 }
 
 .button-submit {
