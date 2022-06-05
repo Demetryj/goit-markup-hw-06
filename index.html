@@ -77,11 +77,11 @@
               <use href="./images/icon-svg/symbol-defs.svg#close-modal"></use>
             </svg>
           </button>
-          <form class="form" name="signup_form" autocomplete="off">
-            <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+          <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
 
-            <label class="label" for="username">Имя</label>
-            <input class="input" type="text" name="username" id="username" autofocus />
+          <form class="form" name="signup_form" autocomplete="off">
+            <label class="label" for="user-name">Имя</label>
+            <input class="input" type="text" name="username" id="user-name" autofocus />
 
             <label class="label" for="telephone">Телефон</label>
             <input class="input" type="tel" name="phone_number" id="telephone" />
@@ -534,6 +534,28 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="mailing">
+          <p class="mailing-title">Подпишитесь на рассылку</p>
+          <form class="mailing-form" name="mailing_form" autocomplete="off">
+            <div class="box-mailing">
+              <label class="mailing-label" for="user_mail"></label>
+              <input
+                class="mailing-input"
+                type="email"
+                name="email"
+                id="user_mail"
+                placeholder="E-mail"
+              />
+              <button class="mailing-button" type="submit">
+                Подписаться
+                <svg class="mailing-icon" width="24" height="24">
+                  <use href="./images/icon-svg/symbol-defs.svg#icon-mailing"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
