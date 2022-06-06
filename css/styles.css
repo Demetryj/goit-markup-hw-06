@@ -344,6 +344,12 @@ body {
 }
 
 .label-terms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -361,10 +367,44 @@ body {
   color: var(--accent-color);
 }
 
+.input-terms {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.check-icon {
+  width: 15px;
+  height: 15px;
+
+  margin-right: 8px;
+
+  border: 1px solid var(--primary-font-color);
+  border-radius: 2px;
+}
+
+.input-terms:checked + .check-icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url('/images/icon-svg/check-icon.svg');
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .input {
   width: 448px;
   height: 40px;
-  padding: 11px 12px;
+  padding: 11px 12px 11px 42px;
   margin-bottom: 10px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -439,20 +479,6 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.box-terms {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-bottom: 30px;
-}
-
-.input-terms {
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-}
-
 .button-submit {
   width: 200px;
   height: 50px;
@@ -468,12 +494,19 @@ body {
   letter-spacing: 0.06em;
 
   color: var(--wite-text-color);
-  background: var(--button-accent-color);
+  background-color: var(--button-accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: transparent;
 
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-submit:hover,
+.button-submit:focus {
+  background-color: #188ce8;
 }
 
 /* Секція 2 */
