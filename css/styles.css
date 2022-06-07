@@ -307,7 +307,8 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-modal:hover {
+.close-modal:hover,
+.close-modal:focus {
   fill: var(--accent-color);
 }
 
@@ -395,10 +396,14 @@ body {
 .input-terms:checked + .check-icon {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  background-image: url('/images/icon-svg/check-icon.svg');
+  background-image: url('../images/icon-svg/check-icon.svg');
   background-origin: border-box;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.input-terms:focus + .check-icon {
+  border-color: var(--accent-color);
 }
 
 .input {
